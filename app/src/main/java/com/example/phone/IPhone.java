@@ -7,17 +7,17 @@ public class IPhone extends Phone implements Ringable {
     }
 
     @Override
-    public void displayInfo() {
-
+    public String displayInfo() {
+       return String.format(this.getVersionNumber(),this.getCarrier());
     }
 
     @Override
     public String ring() {
-        return null;
+        return String.format(this.getVersionNumber(), this.getRingTone());
     }
 
     @Override
     public String unlock() {
-        return null;
+        return ("Unlocking");
     }
 }
